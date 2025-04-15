@@ -1,0 +1,36 @@
+.servicesSection {
+    background-color: #e6e6e6;
+    padding: 4rem;
+  }
+  
+  .sectionTitle {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #000000;
+    text-align: center;
+  }
+  
+  .servicesGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .serviceCard {
+    background-color: #333333;
+    padding: 2rem;
+    border-radius: 8px;
+    color: #ffffff;
+  }
+  
+  .serviceCard h3 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+  
+  .serviceCard p {
+    color: #cccccc;
+    line-height: 1.5;
+  }

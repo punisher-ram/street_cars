@@ -1,0 +1,103 @@
+.contactSection {
+    background-color: #000000;
+    padding: 4rem;
+  }
+  
+  .contactContent {
+    display: flex;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .contactText {
+    flex: 1;
+  }
+  
+  .sectionTitle {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+  }
+  
+  .contactText p {
+    color: #cccccc;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+  
+  .openHours {
+    margin-bottom: 2rem;
+  }
+  
+  .openHours h3 {
+    color: #ffffff;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+  }
+  
+  .hours {
+    display: flex;
+    justify-content: space-between;
+    color: #cccccc;
+    margin-bottom: 0.5rem;
+  }
+  
+  .contactButton {
+    background-color: #e52e2e;
+    color: #ffffff;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contactButton:hover {
+    background-color: #c41d1d;
+  }
+  
+  .mapContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .map {
+    position: relative;
+    height: 300px;
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .mapInfo {
+    margin-top: 1rem;
+  }
+  
+  .mapInfo h4 {
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+  }
+  
+  .mapDetails {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .mapDetails p {
+    color: #cccccc;
+    font-size: 0.9rem;
+    max-width: 60%;
+  }
+  
+  .mapLinks {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .mapLinks a {
+    color: #e52e2e;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+  }
