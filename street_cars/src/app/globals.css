@@ -1,0 +1,35 @@
+:root {
+    --primary-color: #E72A2A;
+    --text-color: #FFFFFF;
+    --background-dark: #000000;
+    --background-light: #1E1E1E;
+    --card-background: #1A1A1A;
+    --input-background: #D9D9D9;
+  }
+  
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--background-dark);
+    color: var(--text-color);
+  }
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  button {
+    cursor: pointer;
+  }
+  
+  /* Add custom font if needed */
+  @font-face {
+    font-family: 'CustomFont';
+    src: url('/fonts/your-font.woff2') format('woff2');
+  }
