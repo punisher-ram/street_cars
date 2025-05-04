@@ -1,0 +1,157 @@
+.container {
+    width: 100%;
+    padding: 2rem 5%;
+  }
+  
+  .hero {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #0a0a0a;
+  }
+  
+  .description {
+    font-size: 1.2rem;
+    color: #666;
+  }
+  
+  .searchBar {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .filterGroup {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .filterGroup label {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    color: #666;
+  }
+  
+  .filterGroup select {
+    padding: 0.8rem;
+    border: 1px solid #f0f0f0;
+    border-radius: 4px;
+    background-color: #fff;
+  }
+  
+  .searchBtn {
+    background-color: #ff3030;
+    color: #fff;
+    padding: 0.8rem 2rem;
+    border-radius: 4px;
+    align-self: flex-end;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .searchBtn:hover {
+    background-color: #e62929;
+  }
+  
+  .searchBtn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .loading, .noCars {
+    text-align: center;
+    padding: 3rem 0;
+    font-size: 1.2rem;
+    color: #666;
+  }
+  
+  .carGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .carCard {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .carCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .carImage {
+    width: 100%;
+    height: 200px;
+    position: relative;
+  }
+  
+  .carTitle {
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 1rem;
+    color: #0a0a0a;
+  }
+  
+  .carDetails {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 1rem;
+  }
+  
+  .detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+  }
+  
+  .detailLabel {
+    font-size: 0.8rem;
+    color: #666;
+  }
+  
+  .detailValue {
+    font-weight: 500;
+  }
+  
+  .viewMoreBtn {
+    display: block;
+    width: 100%;
+    background-color: #ff3030;
+    color: #fff;
+    text-align: center;
+    padding: 0.8rem;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .viewMoreBtn:hover {
+    background-color: #e62929;
+  }
+  
+  @media (max-width: 768px) {
+    .filterGroup {
+      width: 100%;
+    }
+    
+    .searchBtn {
+      width: 100%;
+    }
+  }
