@@ -1,27 +1,14 @@
+/* Global Styles */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --primary-color: #ff3030;
+  --secondary-color: #0a0a0a;
+  --text-color: #333333;
+  --light-gray: #f0f0f0;
+  --dark-gray: #666666;
+  --white: #ffffff;
+  --black: #000000;
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
 }
 
 * {
@@ -30,13 +17,269 @@ body {
   margin: 0;
 }
 
+html,
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: var(--white);
+  color: var(--text-color);
+  scroll-behavior: smooth;
+}
+
 a {
   color: inherit;
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.site-wrapper {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+/* Header Styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background-color: var(--white);
+  box-shadow: var(--box-shadow);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.navigation ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.navigation a {
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.navigation a:hover {
+  color: var(--primary-color);
+}
+
+.add-listing-btn {
+  background-color: var(--white);
+  color: var(--text-color);
+  border: 1px solid var(--light-gray);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.add-listing-btn:hover {
+  background-color: var(--light-gray);
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 80vh;
+  background-color: var(--light-gray);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 5%;
+}
+
+.hero-content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  z-index: 10;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--secondary-color);
+}
+
+.hero-image {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 60%;
+  height: 80%;
+  z-index: 5;
+}
+
+.location-info {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: var(--white);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: var(--box-shadow);
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  max-width: 300px;
+  z-index: 15;
+}
+
+.location-text strong {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.location-text p {
+  font-size: 0.9rem;
+  color: var(--dark-gray);
+}
+
+/* Search Bar */
+.search-bar {
+  display: flex;
+  background-color: var(--white);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: var(--box-shadow);
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.filter-group label {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  color: var(--dark-gray);
+}
+
+.filter-group select {
+  padding: 0.5rem;
+  border: 1px solid var(--light-gray);
+  border-radius: 4px;
+  background-color: var(--white);
+}
+
+.search-btn {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 0.5rem 2rem;
+  border-radius: 4px;
+  align-self: flex-end;
+  transition: var(--transition);
+}
+
+.search-btn:hover {
+  background-color: #e62929;
+}
+
+/* Car Logos Section */
+.car-logos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 5%;
+  background-color: var(--black);
+}
+
+.brand-logo {
+  transition: var(--transition);
+  opacity: 0.7;
+}
+
+.brand-logo:hover {
+  opacity: 1;
+}
+
+/* What We Offer Section */
+.offer-section {
+  padding: 5rem 5%;
+  background-color: var(--white);
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  color: var(--secondary-color);
+}
+
+.offers-container {
+  display: flex;
+  gap: 3rem;
+}
+
+.offers-text {
+  flex: 1;
+}
+
+.offer-description {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.offer-points {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.offer-point {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.point-number {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.offers-cards {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.luxury-card, .listings-card {
+  padding: 1.5rem;
+  border-radius: 8px;
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+  height: 200px;
+}
+
+.luxury-card {
+  background-color: #1e293b;
+}
+
+.listings-card {
+  background-color: var(--primary-color);
+}
+
+.luxury-card h3, .listings-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  position: relative;
+  z-index: 10;
 }
